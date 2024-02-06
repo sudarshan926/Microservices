@@ -1,0 +1,38 @@
+package com.test.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.test.entity.Customer;
+import com.test.service.CustomerServiceImp;
+
+@RestController
+public class CustomerController {
+
+	@Autowired
+	private CustomerServiceImp customerServiceImp;
+	
+	
+	@PostMapping("/")
+	public Customer AddCustomer(@RequestBody Customer c) {
+		return  customerServiceImp.addCustomer(c);
+	}
+	
+	
+	@GetMapping("/")
+	public List<Customer>GetAllCustomer(){
+		
+		return customerServiceImp.getAllCustomer();
+	}
+	@DeleteMapping("delete/{id}")
+	public List<Customer>DeleteCustomer(@PathVariable int id){
+		return customerServiceImp.deleteCustomer(id);
+	}
+}

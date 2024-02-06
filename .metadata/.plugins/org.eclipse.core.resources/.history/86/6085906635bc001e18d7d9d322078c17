@@ -1,0 +1,43 @@
+package com.test.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.test.entity.CustomerDetails;
+import com.test.service.CustomerDetailsServiceImp;
+
+@RestController
+@RequestMapping("/CustomerDetails")
+public class CustomerDetailsController {
+
+	@Autowired
+	private CustomerDetailsServiceImp customerDetailsServiceImp;
+
+	@PostMapping("/")
+	public CustomerDetails addCustomerDetails(@RequestBody CustomerDetails c1) {
+		return customerDetailsServiceImp.AddCustomerDetailsService(c1);
+	}
+
+	@GetMapping("/getone/{id}")
+	public CustomerDetails getCustomerDetails(@PathVariable long id) {
+		return customerDetailsServiceImp.GetCustomerDetailsService(id);
+	}
+
+	@GetMapping("/")
+	public List<CustomerDetails> getAllCustomerDetails() {
+		return customerDetailsServiceImp.GetAllCustomerDetailsService();
+	}
+
+	@DeleteMapping("/delete/{id}")
+	public List<CustomerDetails> deleteCustomerDetails(long id) {
+		return customerDetailsServiceImp.DeleteCustomerDetailsService(id);
+	}
+}

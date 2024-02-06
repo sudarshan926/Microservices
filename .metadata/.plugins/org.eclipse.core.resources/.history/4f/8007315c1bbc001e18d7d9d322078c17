@@ -1,0 +1,34 @@
+package com.test.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.test.entity.Customer;
+import com.test.repository.CustomerRespo;
+
+public class CustomerServiceImp implements CustomerService {
+	@Autowired
+	private CustomerRespo customerRespo;
+
+	@Override
+	public List<Customer> addCustomer(Customer c) {
+		// TODO Auto-generated method stub
+		return customerRespo.saveAll(null);
+	}
+
+	@Override
+	public Optional<Customer> deleteCustomer(int id) {
+		// TODO Auto-generated method stub
+		return customerRespo.findById(id);
+	}
+
+	@Override
+	public List<Customer> getAllCustomer(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+}

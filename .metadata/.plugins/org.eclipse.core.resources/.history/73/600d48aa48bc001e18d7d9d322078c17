@@ -1,0 +1,9 @@
+package com.test.configuration;
+
+import org.springframework.cloud.openfeign.FeignClient;
+
+@FeignClient
+
+public class FignClient {
+
+}

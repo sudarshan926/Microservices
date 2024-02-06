@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\SUDARSHAN\Downloads\micro_yt-main"/>
+			<item value="C:\Users\SUDARSHAN\Downloads\SB-Security-2"/>
+			<item value="D:\Spring_Boot\CRUDPractice-2"/>
+			<item value="C:\Users\SUDARSHAN\Downloads\CRUD"/>
+			<item value="C:\Users\SUDARSHAN\Downloads\demo (1)"/>
+			<item value="C:\Users\SUDARSHAN\Downloads\Online_Cab_Booking-main"/>
+			<item value="C:\Users\SUDARSHAN\Downloads\SpringInitializer"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+</section>

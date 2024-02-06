@@ -1,0 +1,16 @@
+package com.test.service;
+
+import java.util.List;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.test.entity.Customer;
+
+@FeignClient(url = "http://localhost:8882/customer", value ="Customer-Client"  )
+public interface FignClient {
+	
+	@GetMapping("/customer/customerdetails/{customerId}")
+	List<Customer>getCustomerOfcustomerDetails();
+
+}

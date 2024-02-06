@@ -1,0 +1,11 @@
+package com.test.Dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.test.entity.CustomerDetails;
+
+@Repository
+public interface CustomerDetailsDAO extends JpaRepository<CustomerDetails, Long> {
+
+}

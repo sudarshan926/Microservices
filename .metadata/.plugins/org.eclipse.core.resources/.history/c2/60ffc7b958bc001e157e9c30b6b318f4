@@ -1,0 +1,19 @@
+package com.tech.entity;
+
+import java.time.LocalDate;
+
+public class CustomerDetails {
+
+    private Long id;
+
+    private Long customerId;
+
+    private String address;
+
+    private String phone;
+
+    private LocalDate dateOfBirth;
+
+    
+    
+}

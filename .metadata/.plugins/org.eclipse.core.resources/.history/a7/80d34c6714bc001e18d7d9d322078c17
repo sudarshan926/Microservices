@@ -1,0 +1,19 @@
+package com.example.demo;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+
+
+public class SpringSecurityAuth  {
+	@Bean
+	public void SecurityFilterChain(HttpSecurity http) throws Exception{
+		 http
+         .authorizeRequests()
+             .anyRequest().authenticated()
+             .and()
+         .httpBasic();
+		
+		
+	}
+
+}

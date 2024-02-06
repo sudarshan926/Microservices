@@ -1,0 +1,9 @@
+package com.test.service;
+
+import com.test.entity.CustomerDetails;
+
+public interface CustomerDetailsService {
+
+	public CustomerDetails AddCustomerDetailsService(CustomerDetails c1);
+	public CustomerDetails GetCustomerDetailsService(long id);
+}
